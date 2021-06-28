@@ -27,3 +27,5 @@ y.attend <- subset(attend.data,attend=="Y")
 n.attend <- subset(attend.data,attend=="N")
 ggplot(n.attend,aes(x=week,y=n)) +
   geom_bar(stat='identity')
+ggplot(attend.data,aes(x=week,y=n,fill=attend)) +
+  geom_bar(stat='identity')
