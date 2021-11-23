@@ -9,7 +9,7 @@ library(dplyr)
 new.data <- data %>%
   group_by(week,sn) %>%
   summarise(total=sum(minute))
-#매 수업별 접속 시간의 평균의 90% 미달하는 학생을 결석으로 처리
+#매 수업별 접속 시간의 평균의 90% 미달하는 학생을 지각으로 처리
 mean(new.data$total)
 week.mean <- new.data %>% group_by(week) %>%
   summarise(mean=mean(total))
